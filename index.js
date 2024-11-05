@@ -2,6 +2,21 @@ const inquirer = require("inquirer");
 const { Pool } = require("pg");
 const { default: Choice } = require("inquirer/lib/objects/choice");
 const { title } = require("process");
+const logo = require("asciiart-logo");
+console.log(
+  logo({
+    name: "Employee Traker",
+    font: "Graffiti",
+    lineChars: 10,
+    padding: 2,
+    margin: 3,
+  })
+    .emptyLine()
+    .right("version 1.0")
+    .emptyLine()
+    .render()
+);
+
 var tracker = function () {
   inquirer
     .prompt([
